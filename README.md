@@ -1,6 +1,6 @@
 Development Diary.pdf contains relevent developemntal proccesses and technologies used during the development of the app.
 
-![Sign in Page](https://github.com/OliverNagy10/Forward-Food/blob/main/ForwardFoodSignIn.png)
+![Sign in Page](https://github.com/OliverNagy10/Forward-Food/blob/main/images/ForwardFoodSignIn.png)
 
 
 
