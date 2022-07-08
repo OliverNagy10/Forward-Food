@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#D3D3D3">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- TITLE -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="#9966CC"
+            android:text="Create Offer"
+            android:gravity="center"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <!-- START : NAME -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="vertical"
+            android:background="@drawable/border">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Offer Name"
+                android:paddingLeft="5dp"
+                android:textSize="12dp"
+                android:textStyle="bold"
+                android:background="@drawable/border"
+                />
+
+            <EditText
+                android:id="@+id/editText_offerName"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="#CCFFFF"
+                android:inputType="textShortMessage"
+                android:hint="Enter Offer Name Here"
+                android:textSize="12dp"
+                android:paddingLeft="5dp"
+                android:layout_marginRight="2dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginBottom="2dp"
+                />
+
+        </LinearLayout>
+        <!-- END : NAME -->
+
+        <!-- START : DESCRIPTION -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="vertical"
+            android:background="@drawable/border">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Description"
+                android:paddingLeft="5dp"
+                android:textSize="12dp"
+                android:textStyle="bold"
+                android:background="@drawable/border"/>
+
+            <EditText
+                android:id="@+id/editText_description"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="#CCFFFF"
+                android:inputType="textMultiLine|textAutoCorrect"
+                android:hint="Enter Offer Description Here"
+                android:textSize="12dp"
+                android:paddingLeft="5dp"
+                android:layout_marginRight="2dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginBottom="2dp"
+                />
+
+        </LinearLayout>
+        <!-- END : DESCRIPTION -->
+
+        <!-- START : PRICE -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="vertical"
+            android:background="@drawable/border">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Price"
+                android:paddingLeft="5dp"
+                android:textSize="12dp"
+                android:textStyle="bold"
+                android:background="@drawable/border"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:padding="5dp"
+                    android:text="€"
+                    />
+
+                <EditText
+                    android:id="@+id/editText_price"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="2dp"
+                    android:layout_marginBottom="3dp"
+                    android:background="#CCFFFF"
+                    android:hint="Enter Price Here"
+                    android:inputType="none|number"
+                    android:paddingLeft="5dp"
+                    android:textSize="12dp" />
+            </LinearLayout>
+
+        </LinearLayout>
+        <!-- END : PRICE -->
+
+        <!-- START : PICKUP -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="vertical"
+            android:background="@drawable/border">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Pick-Up Time"
+                android:paddingLeft="5dp"
+                android:textSize="12dp"
+                android:textStyle="bold"
+                android:background="@drawable/border" />
+
+            <EditText
+                android:id="@+id/Name"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="#CCFFFF"
+                android:inputType="time"
+                android:hint="Enter Pick-Up Time Here"
+                android:textSize="12dp"
+                android:paddingLeft="5dp"
+                android:layout_marginRight="2dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginBottom="2dp"
+                />
+
+        </LinearLayout>
+        <!-- END : PICKUP -->
+
+        <!-- START : IMAGE -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp" >
+
+            <ImageView
+                android:id="@+id/imageView_offerImage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:srcCompat="@drawable/food_banner" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fab_offerImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|bottom"
+                android:layout_margin="8dp"
+                android:clickable="true"
+                android:focusable="true"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:srcCompat="@android:drawable/ic_menu_gallery"
+                app:backgroundTint="#000000"
+                android:backgroundTint="#9966CC"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <!-- END : IMAGE -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/CancelButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="10dp"
+                android:text="Cancel"
+                android:backgroundTint="#9966CC"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                />
+
+            <Button
+                android:id="@+id/button_save"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_weight="1"
+                android:backgroundTint="#9966CC"
+                android:onClick="Create"
+                android:text="Create"
+                android:textColor="#000000"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
